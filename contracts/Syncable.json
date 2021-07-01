@@ -1,0 +1,254 @@
+{
+  "contractName": "Syncable",
+  "abi": [
+    {
+      "inputs": [],
+      "name": "getIndexLength",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "length",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.8.3+commit.8d00100c\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"name\":\"getIndexLength\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"length\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"title\":\"The listable item should also implement\",\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"/home/coder/project/contracts/_library/utility/syncing/Syncable.sol\":\"Syncable\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"/home/coder/project/contracts/_library/utility/syncing/Syncable.sol\":{\"keccak256\":\"0x25515c7d9ce6dfc33d32d330d62e34fa875ccc29d4527585a97c563340b0527b\",\"license\":\"UNLICENSED\",\"urls\":[\"bzz-raw://05e03b025cd9ebd7b3be99dc42634c4dcf048797df09348d739180d37e81a8be\",\"dweb:/ipfs/QmcLMEU2B2wEb5zsXC1QQAcmCp7ycEobeZc3jD5pX2Tvpa\"]}},\"version\":1}",
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "immutableReferences": {},
+  "generatedSources": [],
+  "deployedGeneratedSources": [],
+  "sourceMap": "",
+  "deployedSourceMap": "",
+  "source": "// SPDX-License-Identifier: UNLICENSED\n/**\n * Copyright (C) SettleMint NV - All Rights Reserved\n *\n * Use of this file is strictly prohibited without an active license agreement.\n * Distribution of this file, via any medium, is strictly prohibited.\n *\n * For license inquiries, contact hello@settlemint.com\n */\n\npragma solidity ^0.8.0;\n\n/**\n * @title The listable item should also implement\n */\nabstract contract Syncable {\n  function getIndexLength() public view virtual returns (uint256 length);\n\n  // Waiting for the time we can return structs from functions!\n  // function getByIndex(uint index) constant public returns (address key, bool hasRole){\n  // function getByKey(address _key) constant public returns (address key, bool hasRole){\n\n  // Since ABIEncoderV2 we can now return the entire registry as address list in one call\n  // function getIndex() constant public returns (address[] index) {\n\n  // Since ABIEncoderV2 we can now return the entire registry as an array of structs in one call\n  // function getContents() constant public returns (Struct[] memory items) {\n}\n",
+  "sourcePath": "/home/coder/project/contracts/_library/utility/syncing/Syncable.sol",
+  "ast": {
+    "absolutePath": "/home/coder/project/contracts/_library/utility/syncing/Syncable.sol",
+    "exportedSymbols": {
+      "Syncable": [
+        9707
+      ]
+    },
+    "id": 9708,
+    "license": "UNLICENSED",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 9700,
+        "literals": [
+          "solidity",
+          "^",
+          "0.8",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "312:23:51"
+      },
+      {
+        "abstract": true,
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": {
+          "id": 9701,
+          "nodeType": "StructuredDocumentation",
+          "src": "337:57:51",
+          "text": " @title The listable item should also implement"
+        },
+        "fullyImplemented": false,
+        "id": 9707,
+        "linearizedBaseContracts": [
+          9707
+        ],
+        "name": "Syncable",
+        "nameLocation": "413:8:51",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "functionSelector": "e1ba7d01",
+            "id": 9706,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getIndexLength",
+            "nameLocation": "435:14:51",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 9702,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "449:2:51"
+            },
+            "returnParameters": {
+              "id": 9705,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 9704,
+                  "mutability": "mutable",
+                  "name": "length",
+                  "nameLocation": "489:6:51",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 9706,
+                  "src": "481:14:51",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 9703,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "481:7:51",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "480:16:51"
+            },
+            "scope": 9707,
+            "src": "426:71:51",
+            "stateMutability": "view",
+            "virtual": true,
+            "visibility": "public"
+          }
+        ],
+        "scope": 9708,
+        "src": "395:685:51"
+      }
+    ],
+    "src": "312:769:51"
+  },
+  "legacyAST": {
+    "absolutePath": "/home/coder/project/contracts/_library/utility/syncing/Syncable.sol",
+    "exportedSymbols": {
+      "Syncable": [
+        9707
+      ]
+    },
+    "id": 9708,
+    "license": "UNLICENSED",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 9700,
+        "literals": [
+          "solidity",
+          "^",
+          "0.8",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "312:23:51"
+      },
+      {
+        "abstract": true,
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": {
+          "id": 9701,
+          "nodeType": "StructuredDocumentation",
+          "src": "337:57:51",
+          "text": " @title The listable item should also implement"
+        },
+        "fullyImplemented": false,
+        "id": 9707,
+        "linearizedBaseContracts": [
+          9707
+        ],
+        "name": "Syncable",
+        "nameLocation": "413:8:51",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "functionSelector": "e1ba7d01",
+            "id": 9706,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getIndexLength",
+            "nameLocation": "435:14:51",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 9702,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "449:2:51"
+            },
+            "returnParameters": {
+              "id": 9705,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 9704,
+                  "mutability": "mutable",
+                  "name": "length",
+                  "nameLocation": "489:6:51",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 9706,
+                  "src": "481:14:51",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 9703,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "481:7:51",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "480:16:51"
+            },
+            "scope": 9707,
+            "src": "426:71:51",
+            "stateMutability": "view",
+            "virtual": true,
+            "visibility": "public"
+          }
+        ],
+        "scope": 9708,
+        "src": "395:685:51"
+      }
+    ],
+    "src": "312:769:51"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.8.3+commit.8d00100c.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.4.1",
+  "updatedAt": "2021-07-01T14:00:20.945Z",
+  "devdoc": {
+    "kind": "dev",
+    "methods": {},
+    "title": "The listable item should also implement",
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {},
+    "version": 1
+  }
+}
