@@ -35846,8 +35846,7 @@
   },
   "networks": {},
   "schemaVersion": "3.4.1",
-  "updatedAt": "2021-07-01T15:06:20.615Z",
-  "networkType": "ethereum",
+  "updatedAt": "2021-07-13T12:53:56.547Z",
   "devdoc": {
     "events": {
       "BillOfLadingCreated(uint256,address,address)": {

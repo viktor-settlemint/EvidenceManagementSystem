@@ -892,7 +892,7 @@
   },
   "networks": {},
   "schemaVersion": "3.4.1",
-  "updatedAt": "2021-07-01T14:00:20.460Z",
+  "updatedAt": "2021-07-13T12:53:56.162Z",
   "devdoc": {
     "details": "The RoleRegistry contract defines the methods and data structures to record if addresses have certain roles or not.",
     "kind": "dev",

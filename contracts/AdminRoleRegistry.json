@@ -62,8 +62,7 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function",
-      "constant": true
+      "type": "function"
     },
     {
       "inputs": [],
@@ -76,8 +75,7 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function",
-      "constant": true
+      "type": "function"
     },
     {
       "inputs": [
@@ -116,8 +114,7 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function",
-      "constant": true
+      "type": "function"
     },
     {
       "inputs": [
@@ -141,8 +138,7 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function",
-      "constant": true
+      "type": "function"
     },
     {
       "inputs": [
@@ -166,8 +162,7 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function",
-      "constant": true
+      "type": "function"
     },
     {
       "inputs": [],
@@ -180,8 +175,7 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function",
-      "constant": true
+      "type": "function"
     },
     {
       "inputs": [],
@@ -194,8 +188,7 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function",
-      "constant": true
+      "type": "function"
     },
     {
       "inputs": [
@@ -214,8 +207,7 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function",
-      "constant": true
+      "type": "function"
     },
     {
       "inputs": [],
@@ -228,8 +220,7 @@
         }
       ],
       "stateMutability": "pure",
-      "type": "function",
-      "constant": true
+      "type": "function"
     }
   ],
   "metadata": "{\"compiler\":{\"version\":\"0.8.3+commit.8d00100c\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"address\",\"name\":\"gatekeeper\",\"type\":\"address\"}],\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"address\",\"name\":\"_address\",\"type\":\"address\"}],\"name\":\"Designated\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"address\",\"name\":\"_address\",\"type\":\"address\"}],\"name\":\"Discharged\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"address\",\"name\":\"_address\",\"type\":\"address\"}],\"name\":\"RoleRegistryCreated\",\"type\":\"event\"},{\"inputs\":[],\"name\":\"DESIGNATE_ROLE\",\"outputs\":[{\"internalType\":\"bytes32\",\"name\":\"\",\"type\":\"bytes32\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"ROLE_ADMIN\",\"outputs\":[{\"internalType\":\"bytes32\",\"name\":\"\",\"type\":\"bytes32\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_address\",\"type\":\"address\"}],\"name\":\"designate\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_address\",\"type\":\"address\"}],\"name\":\"discharge\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"gateKeeper\",\"outputs\":[{\"internalType\":\"contract GateKeeper\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"_index\",\"type\":\"uint256\"}],\"name\":\"getByIndex\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"key\",\"type\":\"address\"},{\"internalType\":\"bool\",\"name\":\"hasTheRole\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_key\",\"type\":\"address\"}],\"name\":\"getByKey\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"key\",\"type\":\"address\"},{\"internalType\":\"bool\",\"name\":\"hasTheRole\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getIndexLength\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"length\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getRoleHolders\",\"outputs\":[{\"internalType\":\"address[]\",\"name\":\"allRoleHolders\",\"type\":\"address[]\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_address\",\"type\":\"address\"}],\"name\":\"hasRole\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"hasTheRole\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"role\",\"outputs\":[{\"internalType\":\"bytes32\",\"name\":\"\",\"type\":\"bytes32\"}],\"stateMutability\":\"pure\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{\"designate(address)\":{\"details\":\"Gives the role managed by this role registry to `_address`. Access is limited by the ACL.\",\"params\":{\"_address\":\"The address to designate the role to.\"}},\"discharge(address)\":{\"details\":\"Removes the role from `_address`. Access is limited by the ACL.\",\"params\":{\"_address\":\"The address to discharge fromn the role.\"}},\"getByIndex(uint256)\":{\"details\":\"Returns the information for the key at index `_index`\",\"params\":{\"_index\":\"The index of the key in the key array\"},\"returns\":{\"key\":\"the information for the key on a certain index\"}},\"getByKey(address)\":{\"details\":\"Returns the information for the key `_key`\",\"params\":{\"_key\":\"The key to get the info for\"},\"returns\":{\"key\":\"the information for the key\"}},\"getIndexLength()\":{\"details\":\"Returns the length of the index array\",\"returns\":{\"length\":\"the amount of items in the index array\"}},\"getRoleHolders()\":{\"details\":\"Returns a list of all the holders of this role.\",\"returns\":{\"allRoleHolders\":\"array with all role holders' addresses\"}},\"hasRole(address)\":{\"details\":\"Checks if `_address` has given the role managed by this role registry\",\"params\":{\"_address\":\"The address to check for the role.\"},\"returns\":{\"hasTheRole\":\"A boolean that is True if the address has the role.\"}},\"role()\":{\"details\":\"Returns the role\",\"returns\":{\"_0\":\"A bytes32 role\"}}},\"title\":\"Lists all administrators\",\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{\"designate(address)\":{\"notice\":\"Gives the role to an address\"},\"discharge(address)\":{\"notice\":\"Removes the role from an address\"},\"getByIndex(uint256)\":{\"notice\":\"Returns the information for the key at a given index\"},\"getByKey(address)\":{\"notice\":\"Returns the information for the key\"},\"getIndexLength()\":{\"notice\":\"Returns the length of the index array\"},\"getRoleHolders()\":{\"notice\":\"Returns a list of all the holders of this role.\"},\"hasRole(address)\":{\"notice\":\"Checks if an address has this role\"}},\"version\":1}},\"settings\":{\"compilationTarget\":{\"/home/coder/project/contracts/roles/AdminRoleRegistry.sol\":\"AdminRoleRegistry\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"/home/coder/project/contracts/_library/authentication/GateKeeper.sol\":{\"keccak256\":\"0x7b1a8912b0bf2f6ab4a2e025c2a08d79acd31b5677da1d5c512a1411e4daa964\",\"license\":\"UNLICENSED\",\"urls\":[\"bzz-raw://e4b6525a9fd4ec26e988079f894ef57b07bdc96538ece92833faccbf5ed301e8\",\"dweb:/ipfs/QmXtwZWG52WaQJ9E5yukTqyW5YdpNy1xwWU1CdxAnZqAjr\"]},\"/home/coder/project/contracts/_library/authentication/RoleRegistry.sol\":{\"keccak256\":\"0x29676b88be2af76528e79765ef4648618ed7ceb23c6199a46f609608a396bef6\",\"license\":\"UNLICENSED\",\"urls\":[\"bzz-raw://b7d2398b96e6798adac56dbd7a1157cf97e6249bb3c7445e86985a2ba606ed52\",\"dweb:/ipfs/QmQzwtbodEPaCTyoSgqcsX2o8HYmAav8XWAuJymDx8ECF1\"]},\"/home/coder/project/contracts/_library/authentication/Secured.sol\":{\"keccak256\":\"0x76363f1bd95a33edcd7cee1beff05b5a97fe20d705abe29cc0dce335d722d1b6\",\"license\":\"UNLICENSED\",\"urls\":[\"bzz-raw://98ef87fac29d5f4da8d8f9089d5848c680636611f543ebce69823d3fe7219bb5\",\"dweb:/ipfs/QmT3X3RW2riWU4KfAEGKKucW5k4bn3nwyCzMfmEwHL6bEJ\"]},\"/home/coder/project/contracts/_library/authentication/interfaces/IRoleRegistry.sol\":{\"keccak256\":\"0xc0e91d25211903b0782943a20477e2bdc0b81444ae69b378b67dc033eb75ceff\",\"license\":\"UNLICENSED\",\"urls\":[\"bzz-raw://e020cb3e46c1e0616b6b44bf7de144cefc951e096d1a7162134c2051406d58ac\",\"dweb:/ipfs/QmVC6x42uZVdoXwqxdcBfS2aqTjAQJxQ3PJMgobEAd43XZ\"]},\"/home/coder/project/contracts/_library/utility/conversions/Converter.sol\":{\"keccak256\":\"0x2c64ab5905db2e804151d86c969c9c4a7b55afec1b8ea29dbf535efb8ee95b2f\",\"license\":\"UNLICENSED\",\"urls\":[\"bzz-raw://921eee343945d2723a4e55432b24e33c6dcb05828bb90608d4b711c9c7b536f2\",\"dweb:/ipfs/QmbAuaLFDWfUH1brqFPbFrL6DPfAswhxsuRBJarVTu2ZAG\"]},\"/home/coder/project/contracts/_library/utility/syncing/Syncable.sol\":{\"keccak256\":\"0x25515c7d9ce6dfc33d32d330d62e34fa875ccc29d4527585a97c563340b0527b\",\"license\":\"UNLICENSED\",\"urls\":[\"bzz-raw://05e03b025cd9ebd7b3be99dc42634c4dcf048797df09348d739180d37e81a8be\",\"dweb:/ipfs/QmcLMEU2B2wEb5zsXC1QQAcmCp7ycEobeZc3jD5pX2Tvpa\"]},\"/home/coder/project/contracts/roles/AdminRoleRegistry.sol\":{\"keccak256\":\"0xc1b2321918a893a33979b0149399f7c76a7851d56fe596bb56f9a596e2aa6596\",\"license\":\"UNLICENSED\",\"urls\":[\"bzz-raw://60c05b64e5cc8af93ef9d461ee6f875528de82babacff3395513aa9f6a572ba9\",\"dweb:/ipfs/QmQYNMk83FouqetkC6K4pPywmoKkm9TVJD2s4Yeht2o1Ep\"]}},\"version\":1}",
@@ -4797,57 +4788,9 @@
     "name": "solc",
     "version": "0.8.3+commit.8d00100c.Emscripten.clang"
   },
-  "networks": {
-    "48000": {
-      "events": {
-        "0x6a7971839356e91af1f994a516a95eac2d3583cb6ba16b104843fcc927d77dae": {
-          "anonymous": false,
-          "inputs": [
-            {
-              "indexed": false,
-              "internalType": "address",
-              "name": "_address",
-              "type": "address"
-            }
-          ],
-          "name": "Designated",
-          "type": "event"
-        },
-        "0xa918a014a3cc4d384620aab101a9de9a018850704254ab6ce288864db9abd98b": {
-          "anonymous": false,
-          "inputs": [
-            {
-              "indexed": false,
-              "internalType": "address",
-              "name": "_address",
-              "type": "address"
-            }
-          ],
-          "name": "Discharged",
-          "type": "event"
-        },
-        "0xe1024fd8985d06ce8c9f997f972a1260bbbb007e7f7496825505aff3b18165e9": {
-          "anonymous": false,
-          "inputs": [
-            {
-              "indexed": false,
-              "internalType": "address",
-              "name": "_address",
-              "type": "address"
-            }
-          ],
-          "name": "RoleRegistryCreated",
-          "type": "event"
-        }
-      },
-      "links": {},
-      "address": "0xB2076196d796E80a71424940Ce813DC5Aa9dDa66",
-      "transactionHash": "0x36b4cfbd8fc18ba63bff3597205590000ad03d6d4f46cba5d5f2c8a4e01eb5b4"
-    }
-  },
+  "networks": {},
   "schemaVersion": "3.4.1",
-  "updatedAt": "2021-07-01T15:08:15.217Z",
-  "networkType": "ethereum",
+  "updatedAt": "2021-07-13T12:53:57.273Z",
   "devdoc": {
     "kind": "dev",
     "methods": {

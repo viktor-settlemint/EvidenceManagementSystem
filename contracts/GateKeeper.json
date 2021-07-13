@@ -73,8 +73,7 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function",
-      "constant": true
+      "type": "function"
     },
     {
       "inputs": [],
@@ -87,8 +86,7 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function",
-      "constant": true
+      "type": "function"
     },
     {
       "inputs": [],
@@ -101,8 +99,7 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function",
-      "constant": true
+      "type": "function"
     },
     {
       "inputs": [
@@ -121,8 +118,7 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function",
-      "constant": true
+      "type": "function"
     },
     {
       "inputs": [
@@ -256,8 +252,7 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function",
-      "constant": true
+      "type": "function"
     },
     {
       "inputs": [
@@ -281,8 +276,7 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function",
-      "constant": true
+      "type": "function"
     },
     {
       "inputs": [
@@ -311,8 +305,7 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function",
-      "constant": true
+      "type": "function"
     },
     {
       "inputs": [
@@ -331,8 +324,7 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function",
-      "constant": true
+      "type": "function"
     },
     {
       "inputs": [
@@ -23299,74 +23291,9 @@
     "name": "solc",
     "version": "0.8.3+commit.8d00100c.Emscripten.clang"
   },
-  "networks": {
-    "48000": {
-      "events": {
-        "0xf3addc8b8e25ee11528a61b0e65092cae0666ef0ec0c64cb303993c88d689b4d": {
-          "anonymous": false,
-          "inputs": [
-            {
-              "indexed": true,
-              "internalType": "address",
-              "name": "contractAddress",
-              "type": "address"
-            },
-            {
-              "indexed": true,
-              "internalType": "bytes32",
-              "name": "role",
-              "type": "bytes32"
-            },
-            {
-              "indexed": true,
-              "internalType": "address",
-              "name": "manager",
-              "type": "address"
-            }
-          ],
-          "name": "ChangePermissionManager",
-          "type": "event"
-        },
-        "0x759b9a74d5354b5801710a0c1b283cc9f0d32b607ac8ced10c83ac8e75c77d52": {
-          "anonymous": false,
-          "inputs": [
-            {
-              "indexed": true,
-              "internalType": "address",
-              "name": "entity",
-              "type": "address"
-            },
-            {
-              "indexed": true,
-              "internalType": "address",
-              "name": "contractAddress",
-              "type": "address"
-            },
-            {
-              "indexed": true,
-              "internalType": "bytes32",
-              "name": "role",
-              "type": "bytes32"
-            },
-            {
-              "indexed": false,
-              "internalType": "bool",
-              "name": "allowed",
-              "type": "bool"
-            }
-          ],
-          "name": "SetPermission",
-          "type": "event"
-        }
-      },
-      "links": {},
-      "address": "0x8373BE27d4bf73f64BdfCA756935B8171347DA3d",
-      "transactionHash": "0x64e0c1bd5327f4fcb8d398cc6aeb851d851c23ebae5dc01a1168a1b0c7961ee1"
-    }
-  },
+  "networks": {},
   "schemaVersion": "3.4.1",
-  "updatedAt": "2021-07-01T15:08:15.198Z",
-  "networkType": "ethereum",
+  "updatedAt": "2021-07-13T12:53:56.145Z",
   "devdoc": {
     "kind": "dev",
     "methods": {
