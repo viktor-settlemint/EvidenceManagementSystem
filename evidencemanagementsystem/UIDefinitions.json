@@ -1,0 +1,35 @@
+{
+  "contractRequiredFields": ["Case_ID"],
+
+  "ipfsRequiredFields": [
+    "Case_ID",
+    "Case_Date",
+
+    "Evidence"
+  ],
+
+  "ipfsOptionalFields": [],
+
+  "contractOptionalFields": [],
+
+  "fileFields": ["Evidence"],
+
+  "dateFields": ["Case_Date"],
+
+  "textFields": [],
+
+  "selectFields": {},
+
+  "knownWalletSelectFields": [],
+
+  "roleRegistrySelectFields": [],
+
+  "subItemActions": [],
+
+  "contractActions": [],
+
+  "ipfsOptionalFieldsForMethod": {},
+  "ipfsRequiredFieldsForMethod": {},
+
+  "listFields": []
+}
