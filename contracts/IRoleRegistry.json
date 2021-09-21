@@ -1,0 +1,930 @@
+{
+  "contractName": "IRoleRegistry",
+  "abi": [
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "address",
+          "name": "_address",
+          "type": "address"
+        }
+      ],
+      "name": "Designated",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "address",
+          "name": "_address",
+          "type": "address"
+        }
+      ],
+      "name": "Discharged",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "address",
+          "name": "_address",
+          "type": "address"
+        }
+      ],
+      "name": "RoleRegistryCreated",
+      "type": "event"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_address",
+          "type": "address"
+        }
+      ],
+      "name": "hasRole",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "hasTheRole",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_address",
+          "type": "address"
+        }
+      ],
+      "name": "designate",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_address",
+          "type": "address"
+        }
+      ],
+      "name": "discharge",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.8.3+commit.8d00100c\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"address\",\"name\":\"_address\",\"type\":\"address\"}],\"name\":\"Designated\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"address\",\"name\":\"_address\",\"type\":\"address\"}],\"name\":\"Discharged\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"address\",\"name\":\"_address\",\"type\":\"address\"}],\"name\":\"RoleRegistryCreated\",\"type\":\"event\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_address\",\"type\":\"address\"}],\"name\":\"designate\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_address\",\"type\":\"address\"}],\"name\":\"discharge\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_address\",\"type\":\"address\"}],\"name\":\"hasRole\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"hasTheRole\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"details\":\"The RoleRegistry contract defines the methods and data structures to record if addresses have certain roles or not.\",\"kind\":\"dev\",\"methods\":{\"designate(address)\":{\"details\":\"Gives the role to an address\",\"params\":{\"_address\":\"The address to designate the role to.\"}},\"discharge(address)\":{\"details\":\"Removes the role from an address\",\"params\":{\"_address\":\"The address to discharge fromn the role.\"}},\"hasRole(address)\":{\"details\":\"Checks if an address has a certain role\",\"params\":{\"_address\":\"The address to check for the role.\"},\"returns\":{\"hasTheRole\":\"A boolean that is True if the address has the role.\"}}},\"title\":\"RoleRegistry\",\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"project:/contracts/_library/authentication/interfaces/IRoleRegistry.sol\":\"IRoleRegistry\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"project:/contracts/_library/authentication/interfaces/IRoleRegistry.sol\":{\"keccak256\":\"0xc0e91d25211903b0782943a20477e2bdc0b81444ae69b378b67dc033eb75ceff\",\"license\":\"UNLICENSED\",\"urls\":[\"bzz-raw://e020cb3e46c1e0616b6b44bf7de144cefc951e096d1a7162134c2051406d58ac\",\"dweb:/ipfs/QmVC6x42uZVdoXwqxdcBfS2aqTjAQJxQ3PJMgobEAd43XZ\"]}},\"version\":1}",
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "immutableReferences": {},
+  "generatedSources": [],
+  "deployedGeneratedSources": [],
+  "sourceMap": "",
+  "deployedSourceMap": "",
+  "source": "/**\n * Copyright (C) SettleMint NV - All Rights Reserved\n *\n * Use of this file is strictly prohibited without an active license agreement.\n * Distribution of this file, via any medium, is strictly prohibited.\n *\n * For license inquiries, contact hello@settlemint.com\n *\n * SPDX-License-Identifier: UNLICENSED\n */\n\npragma solidity ^0.8.0;\n\n/**\n * @title RoleRegistry\n * @dev The RoleRegistry contract defines the methods and data structures to\n * record if addresses have certain roles or not.\n */\nabstract contract IRoleRegistry {\n  event Designated(address _address);\n  event Discharged(address _address);\n  event RoleRegistryCreated(address _address);\n\n  /**\n   * @dev Checks if an address has a certain role\n   * @param _address The address to check for the role.\n   * @return hasTheRole A boolean that is True if the address has the role.\n   */\n  function hasRole(address _address) public view virtual returns (bool hasTheRole);\n\n  /**\n   * @dev Gives the role to an address\n   * @param _address The address to designate the role to.\n   */\n  function designate(address _address) public virtual;\n\n  /**\n   * @dev Removes the role from an address\n   * @param _address The address to discharge fromn the role.\n   */\n  function discharge(address _address) public virtual;\n}\n",
+  "sourcePath": "/home/coder/project/contracts/_library/authentication/interfaces/IRoleRegistry.sol",
+  "ast": {
+    "absolutePath": "project:/contracts/_library/authentication/interfaces/IRoleRegistry.sol",
+    "exportedSymbols": {
+      "IRoleRegistry": [
+        2510
+      ]
+    },
+    "id": 2511,
+    "license": "UNLICENSED",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 2476,
+        "literals": [
+          "solidity",
+          "^",
+          "0.8",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "315:23:21"
+      },
+      {
+        "abstract": true,
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": {
+          "id": 2477,
+          "nodeType": "StructuredDocumentation",
+          "src": "340:157:21",
+          "text": " @title RoleRegistry\n @dev The RoleRegistry contract defines the methods and data structures to\n record if addresses have certain roles or not."
+        },
+        "fullyImplemented": false,
+        "id": 2510,
+        "linearizedBaseContracts": [
+          2510
+        ],
+        "name": "IRoleRegistry",
+        "nameLocation": "516:13:21",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "anonymous": false,
+            "id": 2481,
+            "name": "Designated",
+            "nameLocation": "540:10:21",
+            "nodeType": "EventDefinition",
+            "parameters": {
+              "id": 2480,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2479,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "_address",
+                  "nameLocation": "559:8:21",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2481,
+                  "src": "551:16:21",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 2478,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "551:7:21",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "550:18:21"
+            },
+            "src": "534:35:21"
+          },
+          {
+            "anonymous": false,
+            "id": 2485,
+            "name": "Discharged",
+            "nameLocation": "578:10:21",
+            "nodeType": "EventDefinition",
+            "parameters": {
+              "id": 2484,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2483,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "_address",
+                  "nameLocation": "597:8:21",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2485,
+                  "src": "589:16:21",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 2482,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "589:7:21",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "588:18:21"
+            },
+            "src": "572:35:21"
+          },
+          {
+            "anonymous": false,
+            "id": 2489,
+            "name": "RoleRegistryCreated",
+            "nameLocation": "616:19:21",
+            "nodeType": "EventDefinition",
+            "parameters": {
+              "id": 2488,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2487,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "_address",
+                  "nameLocation": "644:8:21",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2489,
+                  "src": "636:16:21",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 2486,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "636:7:21",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "635:18:21"
+            },
+            "src": "610:44:21"
+          },
+          {
+            "documentation": {
+              "id": 2490,
+              "nodeType": "StructuredDocumentation",
+              "src": "658:191:21",
+              "text": " @dev Checks if an address has a certain role\n @param _address The address to check for the role.\n @return hasTheRole A boolean that is True if the address has the role."
+            },
+            "functionSelector": "7ef09bca",
+            "id": 2497,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "hasRole",
+            "nameLocation": "861:7:21",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 2493,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2492,
+                  "mutability": "mutable",
+                  "name": "_address",
+                  "nameLocation": "877:8:21",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2497,
+                  "src": "869:16:21",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 2491,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "869:7:21",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "868:18:21"
+            },
+            "returnParameters": {
+              "id": 2496,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2495,
+                  "mutability": "mutable",
+                  "name": "hasTheRole",
+                  "nameLocation": "921:10:21",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2497,
+                  "src": "916:15:21",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 2494,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "916:4:21",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "915:17:21"
+            },
+            "scope": 2510,
+            "src": "852:81:21",
+            "stateMutability": "view",
+            "virtual": true,
+            "visibility": "public"
+          },
+          {
+            "documentation": {
+              "id": 2498,
+              "nodeType": "StructuredDocumentation",
+              "src": "937:107:21",
+              "text": " @dev Gives the role to an address\n @param _address The address to designate the role to."
+            },
+            "functionSelector": "45341692",
+            "id": 2503,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "designate",
+            "nameLocation": "1056:9:21",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 2501,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2500,
+                  "mutability": "mutable",
+                  "name": "_address",
+                  "nameLocation": "1074:8:21",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2503,
+                  "src": "1066:16:21",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 2499,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1066:7:21",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1065:18:21"
+            },
+            "returnParameters": {
+              "id": 2502,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1098:0:21"
+            },
+            "scope": 2510,
+            "src": "1047:52:21",
+            "stateMutability": "nonpayable",
+            "virtual": true,
+            "visibility": "public"
+          },
+          {
+            "documentation": {
+              "id": 2504,
+              "nodeType": "StructuredDocumentation",
+              "src": "1103:114:21",
+              "text": " @dev Removes the role from an address\n @param _address The address to discharge fromn the role."
+            },
+            "functionSelector": "0231853a",
+            "id": 2509,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "discharge",
+            "nameLocation": "1229:9:21",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 2507,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2506,
+                  "mutability": "mutable",
+                  "name": "_address",
+                  "nameLocation": "1247:8:21",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2509,
+                  "src": "1239:16:21",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 2505,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1239:7:21",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1238:18:21"
+            },
+            "returnParameters": {
+              "id": 2508,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1271:0:21"
+            },
+            "scope": 2510,
+            "src": "1220:52:21",
+            "stateMutability": "nonpayable",
+            "virtual": true,
+            "visibility": "public"
+          }
+        ],
+        "scope": 2511,
+        "src": "498:776:21"
+      }
+    ],
+    "src": "315:960:21"
+  },
+  "legacyAST": {
+    "absolutePath": "project:/contracts/_library/authentication/interfaces/IRoleRegistry.sol",
+    "exportedSymbols": {
+      "IRoleRegistry": [
+        2510
+      ]
+    },
+    "id": 2511,
+    "license": "UNLICENSED",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 2476,
+        "literals": [
+          "solidity",
+          "^",
+          "0.8",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "315:23:21"
+      },
+      {
+        "abstract": true,
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": {
+          "id": 2477,
+          "nodeType": "StructuredDocumentation",
+          "src": "340:157:21",
+          "text": " @title RoleRegistry\n @dev The RoleRegistry contract defines the methods and data structures to\n record if addresses have certain roles or not."
+        },
+        "fullyImplemented": false,
+        "id": 2510,
+        "linearizedBaseContracts": [
+          2510
+        ],
+        "name": "IRoleRegistry",
+        "nameLocation": "516:13:21",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "anonymous": false,
+            "id": 2481,
+            "name": "Designated",
+            "nameLocation": "540:10:21",
+            "nodeType": "EventDefinition",
+            "parameters": {
+              "id": 2480,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2479,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "_address",
+                  "nameLocation": "559:8:21",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2481,
+                  "src": "551:16:21",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 2478,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "551:7:21",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "550:18:21"
+            },
+            "src": "534:35:21"
+          },
+          {
+            "anonymous": false,
+            "id": 2485,
+            "name": "Discharged",
+            "nameLocation": "578:10:21",
+            "nodeType": "EventDefinition",
+            "parameters": {
+              "id": 2484,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2483,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "_address",
+                  "nameLocation": "597:8:21",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2485,
+                  "src": "589:16:21",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 2482,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "589:7:21",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "588:18:21"
+            },
+            "src": "572:35:21"
+          },
+          {
+            "anonymous": false,
+            "id": 2489,
+            "name": "RoleRegistryCreated",
+            "nameLocation": "616:19:21",
+            "nodeType": "EventDefinition",
+            "parameters": {
+              "id": 2488,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2487,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "_address",
+                  "nameLocation": "644:8:21",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2489,
+                  "src": "636:16:21",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 2486,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "636:7:21",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "635:18:21"
+            },
+            "src": "610:44:21"
+          },
+          {
+            "documentation": {
+              "id": 2490,
+              "nodeType": "StructuredDocumentation",
+              "src": "658:191:21",
+              "text": " @dev Checks if an address has a certain role\n @param _address The address to check for the role.\n @return hasTheRole A boolean that is True if the address has the role."
+            },
+            "functionSelector": "7ef09bca",
+            "id": 2497,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "hasRole",
+            "nameLocation": "861:7:21",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 2493,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2492,
+                  "mutability": "mutable",
+                  "name": "_address",
+                  "nameLocation": "877:8:21",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2497,
+                  "src": "869:16:21",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 2491,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "869:7:21",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "868:18:21"
+            },
+            "returnParameters": {
+              "id": 2496,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2495,
+                  "mutability": "mutable",
+                  "name": "hasTheRole",
+                  "nameLocation": "921:10:21",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2497,
+                  "src": "916:15:21",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 2494,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "916:4:21",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "915:17:21"
+            },
+            "scope": 2510,
+            "src": "852:81:21",
+            "stateMutability": "view",
+            "virtual": true,
+            "visibility": "public"
+          },
+          {
+            "documentation": {
+              "id": 2498,
+              "nodeType": "StructuredDocumentation",
+              "src": "937:107:21",
+              "text": " @dev Gives the role to an address\n @param _address The address to designate the role to."
+            },
+            "functionSelector": "45341692",
+            "id": 2503,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "designate",
+            "nameLocation": "1056:9:21",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 2501,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2500,
+                  "mutability": "mutable",
+                  "name": "_address",
+                  "nameLocation": "1074:8:21",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2503,
+                  "src": "1066:16:21",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 2499,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1066:7:21",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1065:18:21"
+            },
+            "returnParameters": {
+              "id": 2502,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1098:0:21"
+            },
+            "scope": 2510,
+            "src": "1047:52:21",
+            "stateMutability": "nonpayable",
+            "virtual": true,
+            "visibility": "public"
+          },
+          {
+            "documentation": {
+              "id": 2504,
+              "nodeType": "StructuredDocumentation",
+              "src": "1103:114:21",
+              "text": " @dev Removes the role from an address\n @param _address The address to discharge fromn the role."
+            },
+            "functionSelector": "0231853a",
+            "id": 2509,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "discharge",
+            "nameLocation": "1229:9:21",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 2507,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2506,
+                  "mutability": "mutable",
+                  "name": "_address",
+                  "nameLocation": "1247:8:21",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2509,
+                  "src": "1239:16:21",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 2505,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1239:7:21",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1238:18:21"
+            },
+            "returnParameters": {
+              "id": 2508,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1271:0:21"
+            },
+            "scope": 2510,
+            "src": "1220:52:21",
+            "stateMutability": "nonpayable",
+            "virtual": true,
+            "visibility": "public"
+          }
+        ],
+        "scope": 2511,
+        "src": "498:776:21"
+      }
+    ],
+    "src": "315:960:21"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.8.3+commit.8d00100c.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.4.3",
+  "updatedAt": "2021-09-21T08:20:57.993Z",
+  "devdoc": {
+    "details": "The RoleRegistry contract defines the methods and data structures to record if addresses have certain roles or not.",
+    "kind": "dev",
+    "methods": {
+      "designate(address)": {
+        "details": "Gives the role to an address",
+        "params": {
+          "_address": "The address to designate the role to."
+        }
+      },
+      "discharge(address)": {
+        "details": "Removes the role from an address",
+        "params": {
+          "_address": "The address to discharge fromn the role."
+        }
+      },
+      "hasRole(address)": {
+        "details": "Checks if an address has a certain role",
+        "params": {
+          "_address": "The address to check for the role."
+        },
+        "returns": {
+          "hasTheRole": "A boolean that is True if the address has the role."
+        }
+      }
+    },
+    "title": "RoleRegistry",
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {},
+    "version": 1
+  }
+}

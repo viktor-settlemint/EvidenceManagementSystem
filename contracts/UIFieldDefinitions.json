@@ -1,0 +1,519 @@
+{
+  "contractName": "UIFieldDefinitions",
+  "abi": [
+    {
+      "inputs": [],
+      "name": "UPDATE_UIFIELDDEFINITIONS_ROLE",
+      "outputs": [
+        {
+          "internalType": "bytes32",
+          "name": "",
+          "type": "bytes32"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "getUIFieldDefinitionsHash",
+      "outputs": [
+        {
+          "internalType": "string",
+          "name": "",
+          "type": "string"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "string",
+          "name": "uiFieldDefinitionsHash",
+          "type": "string"
+        }
+      ],
+      "name": "setUIFieldDefinitionsHash",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.8.3+commit.8d00100c\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"name\":\"UPDATE_UIFIELDDEFINITIONS_ROLE\",\"outputs\":[{\"internalType\":\"bytes32\",\"name\":\"\",\"type\":\"bytes32\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getUIFieldDefinitionsHash\",\"outputs\":[{\"internalType\":\"string\",\"name\":\"\",\"type\":\"string\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"string\",\"name\":\"uiFieldDefinitionsHash\",\"type\":\"string\"}],\"name\":\"setUIFieldDefinitionsHash\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"project:/contracts/_library/utility/ui/UIFieldDefinitions.sol\":\"UIFieldDefinitions\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"project:/contracts/_library/utility/ui/UIFieldDefinitions.sol\":{\"keccak256\":\"0xcbf7a8c2a67f2d23cdd36b3ae5faacf5a125e77f01d5911b85bf7e4130dc3e63\",\"license\":\"UNLICENSED\",\"urls\":[\"bzz-raw://c026ff624f139187fcb353ee8fa0c24ef2764d42adb23d569adaf86c698c9256\",\"dweb:/ipfs/QmdbWaxThFfE8iKz6wA3n6vKo8VnJTdjykprTpn1cpaLNe\"]}},\"version\":1}",
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "immutableReferences": {},
+  "generatedSources": [],
+  "deployedGeneratedSources": [],
+  "sourceMap": "",
+  "deployedSourceMap": "",
+  "source": "// SPDX-License-Identifier: UNLICENSED\n/**\n * Copyright (C) SettleMint NV - All Rights Reserved\n *\n * Use of this file is strictly prohibited without an active license agreement.\n * Distribution of this file, via any medium, is strictly prohibited.\n *\n * For license inquiries, contact hello@settlemint.com\n */\n\n// solium-disable mixedcase\npragma solidity ^0.8.0;\n\nabstract contract UIFieldDefinitions {\n  bytes32 public constant UPDATE_UIFIELDDEFINITIONS_ROLE = 'UPDATE_UIFIELDDEFINITIONS_ROLE';\n  string internal _uiFieldDefinitionsHash;\n\n  function getUIFieldDefinitionsHash() public view virtual returns (string memory);\n\n  function setUIFieldDefinitionsHash(string memory uiFieldDefinitionsHash) public virtual;\n}\n",
+  "sourcePath": "/home/coder/project/contracts/_library/utility/ui/UIFieldDefinitions.sol",
+  "ast": {
+    "absolutePath": "project:/contracts/_library/utility/ui/UIFieldDefinitions.sol",
+    "exportedSymbols": {
+      "UIFieldDefinitions": [
+        9851
+      ]
+    },
+    "id": 9852,
+    "license": "UNLICENSED",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 9835,
+        "literals": [
+          "solidity",
+          "^",
+          "0.8",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "340:23:54"
+      },
+      {
+        "abstract": true,
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "fullyImplemented": false,
+        "id": 9851,
+        "linearizedBaseContracts": [
+          9851
+        ],
+        "name": "UIFieldDefinitions",
+        "nameLocation": "383:18:54",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": true,
+            "functionSelector": "1f0f992a",
+            "id": 9838,
+            "mutability": "constant",
+            "name": "UPDATE_UIFIELDDEFINITIONS_ROLE",
+            "nameLocation": "430:30:54",
+            "nodeType": "VariableDeclaration",
+            "scope": 9851,
+            "src": "406:89:54",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_bytes32",
+              "typeString": "bytes32"
+            },
+            "typeName": {
+              "id": 9836,
+              "name": "bytes32",
+              "nodeType": "ElementaryTypeName",
+              "src": "406:7:54",
+              "typeDescriptions": {
+                "typeIdentifier": "t_bytes32",
+                "typeString": "bytes32"
+              }
+            },
+            "value": {
+              "hexValue": "5550444154455f55494649454c44444546494e4954494f4e535f524f4c45",
+              "id": 9837,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "string",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "463:32:54",
+              "typeDescriptions": {
+                "typeIdentifier": "t_stringliteral_1800793fdb1f8515d822a02e1ae54eb4984881426fa30c251c04734b239b1b4c",
+                "typeString": "literal_string \"UPDATE_UIFIELDDEFINITIONS_ROLE\""
+              },
+              "value": "UPDATE_UIFIELDDEFINITIONS_ROLE"
+            },
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 9840,
+            "mutability": "mutable",
+            "name": "_uiFieldDefinitionsHash",
+            "nameLocation": "515:23:54",
+            "nodeType": "VariableDeclaration",
+            "scope": 9851,
+            "src": "499:39:54",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_string_storage",
+              "typeString": "string"
+            },
+            "typeName": {
+              "id": 9839,
+              "name": "string",
+              "nodeType": "ElementaryTypeName",
+              "src": "499:6:54",
+              "typeDescriptions": {
+                "typeIdentifier": "t_string_storage_ptr",
+                "typeString": "string"
+              }
+            },
+            "visibility": "internal"
+          },
+          {
+            "functionSelector": "459b9af9",
+            "id": 9845,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getUIFieldDefinitionsHash",
+            "nameLocation": "552:25:54",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 9841,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "577:2:54"
+            },
+            "returnParameters": {
+              "id": 9844,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 9843,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 9845,
+                  "src": "609:13:54",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 9842,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "609:6:54",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "608:15:54"
+            },
+            "scope": 9851,
+            "src": "543:81:54",
+            "stateMutability": "view",
+            "virtual": true,
+            "visibility": "public"
+          },
+          {
+            "functionSelector": "82f68683",
+            "id": 9850,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "setUIFieldDefinitionsHash",
+            "nameLocation": "637:25:54",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 9848,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 9847,
+                  "mutability": "mutable",
+                  "name": "uiFieldDefinitionsHash",
+                  "nameLocation": "677:22:54",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 9850,
+                  "src": "663:36:54",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 9846,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "663:6:54",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "662:38:54"
+            },
+            "returnParameters": {
+              "id": 9849,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "715:0:54"
+            },
+            "scope": 9851,
+            "src": "628:88:54",
+            "stateMutability": "nonpayable",
+            "virtual": true,
+            "visibility": "public"
+          }
+        ],
+        "scope": 9852,
+        "src": "365:353:54"
+      }
+    ],
+    "src": "340:379:54"
+  },
+  "legacyAST": {
+    "absolutePath": "project:/contracts/_library/utility/ui/UIFieldDefinitions.sol",
+    "exportedSymbols": {
+      "UIFieldDefinitions": [
+        9851
+      ]
+    },
+    "id": 9852,
+    "license": "UNLICENSED",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 9835,
+        "literals": [
+          "solidity",
+          "^",
+          "0.8",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "340:23:54"
+      },
+      {
+        "abstract": true,
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "fullyImplemented": false,
+        "id": 9851,
+        "linearizedBaseContracts": [
+          9851
+        ],
+        "name": "UIFieldDefinitions",
+        "nameLocation": "383:18:54",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": true,
+            "functionSelector": "1f0f992a",
+            "id": 9838,
+            "mutability": "constant",
+            "name": "UPDATE_UIFIELDDEFINITIONS_ROLE",
+            "nameLocation": "430:30:54",
+            "nodeType": "VariableDeclaration",
+            "scope": 9851,
+            "src": "406:89:54",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_bytes32",
+              "typeString": "bytes32"
+            },
+            "typeName": {
+              "id": 9836,
+              "name": "bytes32",
+              "nodeType": "ElementaryTypeName",
+              "src": "406:7:54",
+              "typeDescriptions": {
+                "typeIdentifier": "t_bytes32",
+                "typeString": "bytes32"
+              }
+            },
+            "value": {
+              "hexValue": "5550444154455f55494649454c44444546494e4954494f4e535f524f4c45",
+              "id": 9837,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "string",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "463:32:54",
+              "typeDescriptions": {
+                "typeIdentifier": "t_stringliteral_1800793fdb1f8515d822a02e1ae54eb4984881426fa30c251c04734b239b1b4c",
+                "typeString": "literal_string \"UPDATE_UIFIELDDEFINITIONS_ROLE\""
+              },
+              "value": "UPDATE_UIFIELDDEFINITIONS_ROLE"
+            },
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 9840,
+            "mutability": "mutable",
+            "name": "_uiFieldDefinitionsHash",
+            "nameLocation": "515:23:54",
+            "nodeType": "VariableDeclaration",
+            "scope": 9851,
+            "src": "499:39:54",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_string_storage",
+              "typeString": "string"
+            },
+            "typeName": {
+              "id": 9839,
+              "name": "string",
+              "nodeType": "ElementaryTypeName",
+              "src": "499:6:54",
+              "typeDescriptions": {
+                "typeIdentifier": "t_string_storage_ptr",
+                "typeString": "string"
+              }
+            },
+            "visibility": "internal"
+          },
+          {
+            "functionSelector": "459b9af9",
+            "id": 9845,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getUIFieldDefinitionsHash",
+            "nameLocation": "552:25:54",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 9841,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "577:2:54"
+            },
+            "returnParameters": {
+              "id": 9844,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 9843,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 9845,
+                  "src": "609:13:54",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 9842,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "609:6:54",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "608:15:54"
+            },
+            "scope": 9851,
+            "src": "543:81:54",
+            "stateMutability": "view",
+            "virtual": true,
+            "visibility": "public"
+          },
+          {
+            "functionSelector": "82f68683",
+            "id": 9850,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "setUIFieldDefinitionsHash",
+            "nameLocation": "637:25:54",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 9848,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 9847,
+                  "mutability": "mutable",
+                  "name": "uiFieldDefinitionsHash",
+                  "nameLocation": "677:22:54",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 9850,
+                  "src": "663:36:54",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 9846,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "663:6:54",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "662:38:54"
+            },
+            "returnParameters": {
+              "id": 9849,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "715:0:54"
+            },
+            "scope": 9851,
+            "src": "628:88:54",
+            "stateMutability": "nonpayable",
+            "virtual": true,
+            "visibility": "public"
+          }
+        ],
+        "scope": 9852,
+        "src": "365:353:54"
+      }
+    ],
+    "src": "340:379:54"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.8.3+commit.8d00100c.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.4.3",
+  "updatedAt": "2021-09-21T08:20:58.472Z",
+  "devdoc": {
+    "kind": "dev",
+    "methods": {},
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {},
+    "version": 1
+  }
+}

@@ -1,0 +1,241 @@
+{
+  "contractName": "SimpleIExample",
+  "abi": [
+    {
+      "inputs": [],
+      "name": "getUint",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.8.3+commit.8d00100c\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"name\":\"getUint\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"project:/contracts/_library/_test/utility/upgrading/SimpleIExample.sol\":\"SimpleIExample\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"project:/contracts/_library/_test/utility/upgrading/SimpleIExample.sol\":{\"keccak256\":\"0x041317e0ee264075e2fad07f0146eac5e9a5402863cca9948f3353ea3ef4d3a3\",\"license\":\"UNLICENSED\",\"urls\":[\"bzz-raw://9f807c9fbe25ddc54a7aa932a8eeb592cf48ec426c5c44e962dfea999a3d8553\",\"dweb:/ipfs/QmTuHLE2CzW7NxBxNADwpxY5K9YV1cg8rE39iPdJWDm1by\"]}},\"version\":1}",
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "immutableReferences": {},
+  "generatedSources": [],
+  "deployedGeneratedSources": [],
+  "sourceMap": "",
+  "deployedSourceMap": "",
+  "source": "// SPDX-License-Identifier: UNLICENSED\npragma solidity ^0.8.0;\n\n/* Example contracts interface */\nabstract contract SimpleIExample {\n  function getUint() public view virtual returns (uint256);\n}\n",
+  "sourcePath": "/home/coder/project/contracts/_library/_test/utility/upgrading/SimpleIExample.sol",
+  "ast": {
+    "absolutePath": "project:/contracts/_library/_test/utility/upgrading/SimpleIExample.sol",
+    "exportedSymbols": {
+      "SimpleIExample": [
+        1315
+      ]
+    },
+    "id": 1316,
+    "license": "UNLICENSED",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 1309,
+        "literals": [
+          "solidity",
+          "^",
+          "0.8",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "39:23:17"
+      },
+      {
+        "abstract": true,
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "fullyImplemented": false,
+        "id": 1315,
+        "linearizedBaseContracts": [
+          1315
+        ],
+        "name": "SimpleIExample",
+        "nameLocation": "116:14:17",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "functionSelector": "000267a4",
+            "id": 1314,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getUint",
+            "nameLocation": "144:7:17",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1310,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "151:2:17"
+            },
+            "returnParameters": {
+              "id": 1313,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1312,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1314,
+                  "src": "183:7:17",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 1311,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "183:7:17",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "182:9:17"
+            },
+            "scope": 1315,
+            "src": "135:57:17",
+            "stateMutability": "view",
+            "virtual": true,
+            "visibility": "public"
+          }
+        ],
+        "scope": 1316,
+        "src": "98:96:17"
+      }
+    ],
+    "src": "39:156:17"
+  },
+  "legacyAST": {
+    "absolutePath": "project:/contracts/_library/_test/utility/upgrading/SimpleIExample.sol",
+    "exportedSymbols": {
+      "SimpleIExample": [
+        1315
+      ]
+    },
+    "id": 1316,
+    "license": "UNLICENSED",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 1309,
+        "literals": [
+          "solidity",
+          "^",
+          "0.8",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "39:23:17"
+      },
+      {
+        "abstract": true,
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "fullyImplemented": false,
+        "id": 1315,
+        "linearizedBaseContracts": [
+          1315
+        ],
+        "name": "SimpleIExample",
+        "nameLocation": "116:14:17",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "functionSelector": "000267a4",
+            "id": 1314,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getUint",
+            "nameLocation": "144:7:17",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1310,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "151:2:17"
+            },
+            "returnParameters": {
+              "id": 1313,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1312,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1314,
+                  "src": "183:7:17",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 1311,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "183:7:17",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "182:9:17"
+            },
+            "scope": 1315,
+            "src": "135:57:17",
+            "stateMutability": "view",
+            "virtual": true,
+            "visibility": "public"
+          }
+        ],
+        "scope": 1316,
+        "src": "98:96:17"
+      }
+    ],
+    "src": "39:156:17"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.8.3+commit.8d00100c.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.4.3",
+  "updatedAt": "2021-09-21T08:20:57.969Z",
+  "devdoc": {
+    "kind": "dev",
+    "methods": {},
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {},
+    "version": 1
+  }
+}

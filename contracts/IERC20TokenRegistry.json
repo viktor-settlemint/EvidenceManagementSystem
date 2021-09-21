@@ -1,0 +1,1003 @@
+{
+  "contractName": "IERC20TokenRegistry",
+  "abi": [
+    {
+      "inputs": [],
+      "name": "LIST_TOKEN_ROLE",
+      "outputs": [
+        {
+          "internalType": "bytes32",
+          "name": "",
+          "type": "bytes32"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "gateKeeper",
+      "outputs": [
+        {
+          "internalType": "contract GateKeeper",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "getIndexLength",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "length",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "name": "tokenIndex",
+      "outputs": [
+        {
+          "internalType": "string",
+          "name": "",
+          "type": "string"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "string",
+          "name": "",
+          "type": "string"
+        }
+      ],
+      "name": "tokens",
+      "outputs": [
+        {
+          "internalType": "contract IERC20Token",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "string",
+          "name": "name",
+          "type": "string"
+        },
+        {
+          "internalType": "address",
+          "name": "token",
+          "type": "address"
+        }
+      ],
+      "name": "addToken",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.8.3+commit.8d00100c\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"name\":\"LIST_TOKEN_ROLE\",\"outputs\":[{\"internalType\":\"bytes32\",\"name\":\"\",\"type\":\"bytes32\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"string\",\"name\":\"name\",\"type\":\"string\"},{\"internalType\":\"address\",\"name\":\"token\",\"type\":\"address\"}],\"name\":\"addToken\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"gateKeeper\",\"outputs\":[{\"internalType\":\"contract GateKeeper\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getIndexLength\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"length\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"name\":\"tokenIndex\",\"outputs\":[{\"internalType\":\"string\",\"name\":\"\",\"type\":\"string\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"string\",\"name\":\"\",\"type\":\"string\"}],\"name\":\"tokens\",\"outputs\":[{\"internalType\":\"contract IERC20Token\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"project:/contracts/_library/tokens/ERC20/IERC20TokenRegistry.sol\":\"IERC20TokenRegistry\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"project:/contracts/_library/authentication/GateKeeper.sol\":{\"keccak256\":\"0x7b1a8912b0bf2f6ab4a2e025c2a08d79acd31b5677da1d5c512a1411e4daa964\",\"license\":\"UNLICENSED\",\"urls\":[\"bzz-raw://e4b6525a9fd4ec26e988079f894ef57b07bdc96538ece92833faccbf5ed301e8\",\"dweb:/ipfs/QmXtwZWG52WaQJ9E5yukTqyW5YdpNy1xwWU1CdxAnZqAjr\"]},\"project:/contracts/_library/authentication/Secured.sol\":{\"keccak256\":\"0x76363f1bd95a33edcd7cee1beff05b5a97fe20d705abe29cc0dce335d722d1b6\",\"license\":\"UNLICENSED\",\"urls\":[\"bzz-raw://98ef87fac29d5f4da8d8f9089d5848c680636611f543ebce69823d3fe7219bb5\",\"dweb:/ipfs/QmT3X3RW2riWU4KfAEGKKucW5k4bn3nwyCzMfmEwHL6bEJ\"]},\"project:/contracts/_library/authentication/interfaces/IRoleRegistry.sol\":{\"keccak256\":\"0xc0e91d25211903b0782943a20477e2bdc0b81444ae69b378b67dc033eb75ceff\",\"license\":\"UNLICENSED\",\"urls\":[\"bzz-raw://e020cb3e46c1e0616b6b44bf7de144cefc951e096d1a7162134c2051406d58ac\",\"dweb:/ipfs/QmVC6x42uZVdoXwqxdcBfS2aqTjAQJxQ3PJMgobEAd43XZ\"]},\"project:/contracts/_library/tokens/ERC20/IERC20Token.sol\":{\"keccak256\":\"0xc6f59437b8c89d70a75c8e7d189b35ea00f3f7f2448ab33e99cf62621faf3e01\",\"license\":\"UNLICENSED\",\"urls\":[\"bzz-raw://25ad5d2f23e133c7bb43c587e59016ab5afcbc614c9625de252efc2b8d32242a\",\"dweb:/ipfs/QmXgyVnNfyvSnC6uRsdGdvyeewWpNTS5rA1VYMyf3u2FPE\"]},\"project:/contracts/_library/tokens/ERC20/IERC20TokenRegistry.sol\":{\"keccak256\":\"0x2ad74b73f8c0a4c09795d7d3f441d3893b531b17107804016786c7f19d426fb6\",\"license\":\"UNLICENSED\",\"urls\":[\"bzz-raw://04d3c9f9b5ac565ac753d8956f45b0744cff33f450af04076fd27631ef5ca79b\",\"dweb:/ipfs/QmbLTLkDDVKbyJwRTboMsNwEXTXnGFV5QsTLcBAkc7RqEu\"]},\"project:/contracts/_library/utility/conversions/Converter.sol\":{\"keccak256\":\"0x2c64ab5905db2e804151d86c969c9c4a7b55afec1b8ea29dbf535efb8ee95b2f\",\"license\":\"UNLICENSED\",\"urls\":[\"bzz-raw://921eee343945d2723a4e55432b24e33c6dcb05828bb90608d4b711c9c7b536f2\",\"dweb:/ipfs/QmbAuaLFDWfUH1brqFPbFrL6DPfAswhxsuRBJarVTu2ZAG\"]},\"project:/contracts/_library/utility/metadata/IpfsFieldContainer.sol\":{\"keccak256\":\"0x57552ced13037e663c2456e18077d0d6deba35a5aa84bce64ee3a4fe856901fa\",\"license\":\"UNLICENSED\",\"urls\":[\"bzz-raw://ef58835148554f054b3b722d12acaf0c9c371e44f48b16679bd0d43320b2b047\",\"dweb:/ipfs/QmV15yVaEt8bLVUfrmZtqvxtrujhbM6mJHGBUWx6gDQgnu\"]},\"project:/contracts/_library/utility/syncing/Syncable.sol\":{\"keccak256\":\"0x25515c7d9ce6dfc33d32d330d62e34fa875ccc29d4527585a97c563340b0527b\",\"license\":\"UNLICENSED\",\"urls\":[\"bzz-raw://05e03b025cd9ebd7b3be99dc42634c4dcf048797df09348d739180d37e81a8be\",\"dweb:/ipfs/QmcLMEU2B2wEb5zsXC1QQAcmCp7ycEobeZc3jD5pX2Tvpa\"]}},\"version\":1}",
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "immutableReferences": {},
+  "generatedSources": [],
+  "deployedGeneratedSources": [],
+  "sourceMap": "",
+  "deployedSourceMap": "",
+  "source": "// SPDX-License-Identifier: UNLICENSED\n/**\n * Copyright (C) SettleMint NV - All Rights Reserved\n *\n * Use of this file is strictly prohibited without an active license agreement.\n * Distribution of this file, via any medium, is strictly prohibited.\n *\n * For license inquiries, contact hello@settlemint.com\n */\n\npragma solidity ^0.8.0;\n\nimport '../../utility/syncing/Syncable.sol';\nimport '../../authentication/Secured.sol';\nimport './IERC20Token.sol';\n\nabstract contract IERC20TokenRegistry is Secured, Syncable {\n  bytes32 public constant LIST_TOKEN_ROLE = 'LIST_TOKEN_ROLE';\n\n  mapping(string => IERC20Token) public tokens;\n  string[] public tokenIndex;\n\n  constructor(address gateKeeper) Secured(gateKeeper) {}\n\n  function addToken(string memory name, address token) public virtual;\n}\n",
+  "sourcePath": "/home/coder/project/contracts/_library/tokens/ERC20/IERC20TokenRegistry.sol",
+  "ast": {
+    "absolutePath": "project:/contracts/_library/tokens/ERC20/IERC20TokenRegistry.sol",
+    "exportedSymbols": {
+      "Converter": [
+        9752
+      ],
+      "GateKeeper": [
+        2038
+      ],
+      "IERC20Token": [
+        8659
+      ],
+      "IERC20TokenRegistry": [
+        8733
+      ],
+      "IRoleRegistry": [
+        2510
+      ],
+      "IpfsFieldContainer": [
+        9824
+      ],
+      "Secured": [
+        2474
+      ],
+      "Syncable": [
+        9833
+      ]
+    },
+    "id": 8734,
+    "license": "UNLICENSED",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 8698,
+        "literals": [
+          "solidity",
+          "^",
+          "0.8",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "312:23:43"
+      },
+      {
+        "absolutePath": "project:/contracts/_library/utility/syncing/Syncable.sol",
+        "file": "../../utility/syncing/Syncable.sol",
+        "id": 8699,
+        "nameLocation": "-1:-1:-1",
+        "nodeType": "ImportDirective",
+        "scope": 8734,
+        "sourceUnit": 9834,
+        "src": "337:44:43",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "project:/contracts/_library/authentication/Secured.sol",
+        "file": "../../authentication/Secured.sol",
+        "id": 8700,
+        "nameLocation": "-1:-1:-1",
+        "nodeType": "ImportDirective",
+        "scope": 8734,
+        "sourceUnit": 2475,
+        "src": "382:42:43",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "project:/contracts/_library/tokens/ERC20/IERC20Token.sol",
+        "file": "./IERC20Token.sol",
+        "id": 8701,
+        "nameLocation": "-1:-1:-1",
+        "nodeType": "ImportDirective",
+        "scope": 8734,
+        "sourceUnit": 8660,
+        "src": "425:27:43",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "abstract": true,
+        "baseContracts": [
+          {
+            "baseName": {
+              "id": 8702,
+              "name": "Secured",
+              "nodeType": "IdentifierPath",
+              "referencedDeclaration": 2474,
+              "src": "495:7:43"
+            },
+            "id": 8703,
+            "nodeType": "InheritanceSpecifier",
+            "src": "495:7:43"
+          },
+          {
+            "baseName": {
+              "id": 8704,
+              "name": "Syncable",
+              "nodeType": "IdentifierPath",
+              "referencedDeclaration": 9833,
+              "src": "504:8:43"
+            },
+            "id": 8705,
+            "nodeType": "InheritanceSpecifier",
+            "src": "504:8:43"
+          }
+        ],
+        "contractDependencies": [
+          2474,
+          9752,
+          9833
+        ],
+        "contractKind": "contract",
+        "fullyImplemented": false,
+        "id": 8733,
+        "linearizedBaseContracts": [
+          8733,
+          9833,
+          2474,
+          9752
+        ],
+        "name": "IERC20TokenRegistry",
+        "nameLocation": "472:19:43",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": true,
+            "functionSelector": "8273871e",
+            "id": 8708,
+            "mutability": "constant",
+            "name": "LIST_TOKEN_ROLE",
+            "nameLocation": "541:15:43",
+            "nodeType": "VariableDeclaration",
+            "scope": 8733,
+            "src": "517:59:43",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_bytes32",
+              "typeString": "bytes32"
+            },
+            "typeName": {
+              "id": 8706,
+              "name": "bytes32",
+              "nodeType": "ElementaryTypeName",
+              "src": "517:7:43",
+              "typeDescriptions": {
+                "typeIdentifier": "t_bytes32",
+                "typeString": "bytes32"
+              }
+            },
+            "value": {
+              "hexValue": "4c4953545f544f4b454e5f524f4c45",
+              "id": 8707,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "string",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "559:17:43",
+              "typeDescriptions": {
+                "typeIdentifier": "t_stringliteral_3fdf5299f16fe12a87559e9b4907f7062e4e08c3f7a43de43f75e8ec03a315d3",
+                "typeString": "literal_string \"LIST_TOKEN_ROLE\""
+              },
+              "value": "LIST_TOKEN_ROLE"
+            },
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "functionSelector": "04c2320b",
+            "id": 8713,
+            "mutability": "mutable",
+            "name": "tokens",
+            "nameLocation": "619:6:43",
+            "nodeType": "VariableDeclaration",
+            "scope": 8733,
+            "src": "581:44:43",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_string_memory_ptr_$_t_contract$_IERC20Token_$8659_$",
+              "typeString": "mapping(string => contract IERC20Token)"
+            },
+            "typeName": {
+              "id": 8712,
+              "keyType": {
+                "id": 8709,
+                "name": "string",
+                "nodeType": "ElementaryTypeName",
+                "src": "589:6:43",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "581:30:43",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_string_memory_ptr_$_t_contract$_IERC20Token_$8659_$",
+                "typeString": "mapping(string => contract IERC20Token)"
+              },
+              "valueType": {
+                "id": 8711,
+                "nodeType": "UserDefinedTypeName",
+                "pathNode": {
+                  "id": 8710,
+                  "name": "IERC20Token",
+                  "nodeType": "IdentifierPath",
+                  "referencedDeclaration": 8659,
+                  "src": "599:11:43"
+                },
+                "referencedDeclaration": 8659,
+                "src": "599:11:43",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_contract$_IERC20Token_$8659",
+                  "typeString": "contract IERC20Token"
+                }
+              }
+            },
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "functionSelector": "0583e9f8",
+            "id": 8716,
+            "mutability": "mutable",
+            "name": "tokenIndex",
+            "nameLocation": "645:10:43",
+            "nodeType": "VariableDeclaration",
+            "scope": 8733,
+            "src": "629:26:43",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_array$_t_string_storage_$dyn_storage",
+              "typeString": "string[]"
+            },
+            "typeName": {
+              "baseType": {
+                "id": 8714,
+                "name": "string",
+                "nodeType": "ElementaryTypeName",
+                "src": "629:6:43",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                }
+              },
+              "id": 8715,
+              "nodeType": "ArrayTypeName",
+              "src": "629:8:43",
+              "typeDescriptions": {
+                "typeIdentifier": "t_array$_t_string_storage_$dyn_storage_ptr",
+                "typeString": "string[]"
+              }
+            },
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 8724,
+              "nodeType": "Block",
+              "src": "712:2:43",
+              "statements": []
+            },
+            "id": 8725,
+            "implemented": true,
+            "kind": "constructor",
+            "modifiers": [
+              {
+                "arguments": [
+                  {
+                    "id": 8721,
+                    "name": "gateKeeper",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 8718,
+                    "src": "700:10:43",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  }
+                ],
+                "id": 8722,
+                "modifierName": {
+                  "id": 8720,
+                  "name": "Secured",
+                  "nodeType": "IdentifierPath",
+                  "referencedDeclaration": 2474,
+                  "src": "692:7:43"
+                },
+                "nodeType": "ModifierInvocation",
+                "src": "692:19:43"
+              }
+            ],
+            "name": "",
+            "nameLocation": "-1:-1:-1",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 8719,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 8718,
+                  "mutability": "mutable",
+                  "name": "gateKeeper",
+                  "nameLocation": "680:10:43",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 8725,
+                  "src": "672:18:43",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 8717,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "672:7:43",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "671:20:43"
+            },
+            "returnParameters": {
+              "id": 8723,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "712:0:43"
+            },
+            "scope": 8733,
+            "src": "660:54:43",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "internal"
+          },
+          {
+            "functionSelector": "b0b22c2c",
+            "id": 8732,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "addToken",
+            "nameLocation": "727:8:43",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 8730,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 8727,
+                  "mutability": "mutable",
+                  "name": "name",
+                  "nameLocation": "750:4:43",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 8732,
+                  "src": "736:18:43",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 8726,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "736:6:43",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 8729,
+                  "mutability": "mutable",
+                  "name": "token",
+                  "nameLocation": "764:5:43",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 8732,
+                  "src": "756:13:43",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 8728,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "756:7:43",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "735:35:43"
+            },
+            "returnParameters": {
+              "id": 8731,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "785:0:43"
+            },
+            "scope": 8733,
+            "src": "718:68:43",
+            "stateMutability": "nonpayable",
+            "virtual": true,
+            "visibility": "public"
+          }
+        ],
+        "scope": 8734,
+        "src": "454:334:43"
+      }
+    ],
+    "src": "312:477:43"
+  },
+  "legacyAST": {
+    "absolutePath": "project:/contracts/_library/tokens/ERC20/IERC20TokenRegistry.sol",
+    "exportedSymbols": {
+      "Converter": [
+        9752
+      ],
+      "GateKeeper": [
+        2038
+      ],
+      "IERC20Token": [
+        8659
+      ],
+      "IERC20TokenRegistry": [
+        8733
+      ],
+      "IRoleRegistry": [
+        2510
+      ],
+      "IpfsFieldContainer": [
+        9824
+      ],
+      "Secured": [
+        2474
+      ],
+      "Syncable": [
+        9833
+      ]
+    },
+    "id": 8734,
+    "license": "UNLICENSED",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 8698,
+        "literals": [
+          "solidity",
+          "^",
+          "0.8",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "312:23:43"
+      },
+      {
+        "absolutePath": "project:/contracts/_library/utility/syncing/Syncable.sol",
+        "file": "../../utility/syncing/Syncable.sol",
+        "id": 8699,
+        "nameLocation": "-1:-1:-1",
+        "nodeType": "ImportDirective",
+        "scope": 8734,
+        "sourceUnit": 9834,
+        "src": "337:44:43",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "project:/contracts/_library/authentication/Secured.sol",
+        "file": "../../authentication/Secured.sol",
+        "id": 8700,
+        "nameLocation": "-1:-1:-1",
+        "nodeType": "ImportDirective",
+        "scope": 8734,
+        "sourceUnit": 2475,
+        "src": "382:42:43",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "project:/contracts/_library/tokens/ERC20/IERC20Token.sol",
+        "file": "./IERC20Token.sol",
+        "id": 8701,
+        "nameLocation": "-1:-1:-1",
+        "nodeType": "ImportDirective",
+        "scope": 8734,
+        "sourceUnit": 8660,
+        "src": "425:27:43",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "abstract": true,
+        "baseContracts": [
+          {
+            "baseName": {
+              "id": 8702,
+              "name": "Secured",
+              "nodeType": "IdentifierPath",
+              "referencedDeclaration": 2474,
+              "src": "495:7:43"
+            },
+            "id": 8703,
+            "nodeType": "InheritanceSpecifier",
+            "src": "495:7:43"
+          },
+          {
+            "baseName": {
+              "id": 8704,
+              "name": "Syncable",
+              "nodeType": "IdentifierPath",
+              "referencedDeclaration": 9833,
+              "src": "504:8:43"
+            },
+            "id": 8705,
+            "nodeType": "InheritanceSpecifier",
+            "src": "504:8:43"
+          }
+        ],
+        "contractDependencies": [
+          2474,
+          9752,
+          9833
+        ],
+        "contractKind": "contract",
+        "fullyImplemented": false,
+        "id": 8733,
+        "linearizedBaseContracts": [
+          8733,
+          9833,
+          2474,
+          9752
+        ],
+        "name": "IERC20TokenRegistry",
+        "nameLocation": "472:19:43",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": true,
+            "functionSelector": "8273871e",
+            "id": 8708,
+            "mutability": "constant",
+            "name": "LIST_TOKEN_ROLE",
+            "nameLocation": "541:15:43",
+            "nodeType": "VariableDeclaration",
+            "scope": 8733,
+            "src": "517:59:43",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_bytes32",
+              "typeString": "bytes32"
+            },
+            "typeName": {
+              "id": 8706,
+              "name": "bytes32",
+              "nodeType": "ElementaryTypeName",
+              "src": "517:7:43",
+              "typeDescriptions": {
+                "typeIdentifier": "t_bytes32",
+                "typeString": "bytes32"
+              }
+            },
+            "value": {
+              "hexValue": "4c4953545f544f4b454e5f524f4c45",
+              "id": 8707,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "string",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "559:17:43",
+              "typeDescriptions": {
+                "typeIdentifier": "t_stringliteral_3fdf5299f16fe12a87559e9b4907f7062e4e08c3f7a43de43f75e8ec03a315d3",
+                "typeString": "literal_string \"LIST_TOKEN_ROLE\""
+              },
+              "value": "LIST_TOKEN_ROLE"
+            },
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "functionSelector": "04c2320b",
+            "id": 8713,
+            "mutability": "mutable",
+            "name": "tokens",
+            "nameLocation": "619:6:43",
+            "nodeType": "VariableDeclaration",
+            "scope": 8733,
+            "src": "581:44:43",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_string_memory_ptr_$_t_contract$_IERC20Token_$8659_$",
+              "typeString": "mapping(string => contract IERC20Token)"
+            },
+            "typeName": {
+              "id": 8712,
+              "keyType": {
+                "id": 8709,
+                "name": "string",
+                "nodeType": "ElementaryTypeName",
+                "src": "589:6:43",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "581:30:43",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_string_memory_ptr_$_t_contract$_IERC20Token_$8659_$",
+                "typeString": "mapping(string => contract IERC20Token)"
+              },
+              "valueType": {
+                "id": 8711,
+                "nodeType": "UserDefinedTypeName",
+                "pathNode": {
+                  "id": 8710,
+                  "name": "IERC20Token",
+                  "nodeType": "IdentifierPath",
+                  "referencedDeclaration": 8659,
+                  "src": "599:11:43"
+                },
+                "referencedDeclaration": 8659,
+                "src": "599:11:43",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_contract$_IERC20Token_$8659",
+                  "typeString": "contract IERC20Token"
+                }
+              }
+            },
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "functionSelector": "0583e9f8",
+            "id": 8716,
+            "mutability": "mutable",
+            "name": "tokenIndex",
+            "nameLocation": "645:10:43",
+            "nodeType": "VariableDeclaration",
+            "scope": 8733,
+            "src": "629:26:43",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_array$_t_string_storage_$dyn_storage",
+              "typeString": "string[]"
+            },
+            "typeName": {
+              "baseType": {
+                "id": 8714,
+                "name": "string",
+                "nodeType": "ElementaryTypeName",
+                "src": "629:6:43",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                }
+              },
+              "id": 8715,
+              "nodeType": "ArrayTypeName",
+              "src": "629:8:43",
+              "typeDescriptions": {
+                "typeIdentifier": "t_array$_t_string_storage_$dyn_storage_ptr",
+                "typeString": "string[]"
+              }
+            },
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 8724,
+              "nodeType": "Block",
+              "src": "712:2:43",
+              "statements": []
+            },
+            "id": 8725,
+            "implemented": true,
+            "kind": "constructor",
+            "modifiers": [
+              {
+                "arguments": [
+                  {
+                    "id": 8721,
+                    "name": "gateKeeper",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 8718,
+                    "src": "700:10:43",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  }
+                ],
+                "id": 8722,
+                "modifierName": {
+                  "id": 8720,
+                  "name": "Secured",
+                  "nodeType": "IdentifierPath",
+                  "referencedDeclaration": 2474,
+                  "src": "692:7:43"
+                },
+                "nodeType": "ModifierInvocation",
+                "src": "692:19:43"
+              }
+            ],
+            "name": "",
+            "nameLocation": "-1:-1:-1",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 8719,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 8718,
+                  "mutability": "mutable",
+                  "name": "gateKeeper",
+                  "nameLocation": "680:10:43",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 8725,
+                  "src": "672:18:43",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 8717,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "672:7:43",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "671:20:43"
+            },
+            "returnParameters": {
+              "id": 8723,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "712:0:43"
+            },
+            "scope": 8733,
+            "src": "660:54:43",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "internal"
+          },
+          {
+            "functionSelector": "b0b22c2c",
+            "id": 8732,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "addToken",
+            "nameLocation": "727:8:43",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 8730,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 8727,
+                  "mutability": "mutable",
+                  "name": "name",
+                  "nameLocation": "750:4:43",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 8732,
+                  "src": "736:18:43",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 8726,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "736:6:43",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 8729,
+                  "mutability": "mutable",
+                  "name": "token",
+                  "nameLocation": "764:5:43",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 8732,
+                  "src": "756:13:43",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 8728,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "756:7:43",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "735:35:43"
+            },
+            "returnParameters": {
+              "id": 8731,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "785:0:43"
+            },
+            "scope": 8733,
+            "src": "718:68:43",
+            "stateMutability": "nonpayable",
+            "virtual": true,
+            "visibility": "public"
+          }
+        ],
+        "scope": 8734,
+        "src": "454:334:43"
+      }
+    ],
+    "src": "312:477:43"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.8.3+commit.8d00100c.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.4.3",
+  "updatedAt": "2021-09-21T08:20:58.367Z",
+  "devdoc": {
+    "kind": "dev",
+    "methods": {},
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {},
+    "version": 1
+  }
+}
